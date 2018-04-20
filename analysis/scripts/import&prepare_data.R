@@ -30,7 +30,7 @@ sport          <- read_dir('../../dataset/sport')
 tech           <- read_dir('../../dataset/tech')  
 
 # i try read_dir function form *textreadr* package 
-#  it's look to my good but thier are alot of rpeatation in matrix result
+#  it's look to me good but thier are alot of rpeatation in matrix result
 
 #----------------------------------------------------------------------------------------------------
 # function tor read from directory all file and return datafram as c(filename , content)
