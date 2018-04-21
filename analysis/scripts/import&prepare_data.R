@@ -30,7 +30,7 @@ sport          <- read_dir('../../dataset/sport')
 tech           <- read_dir('../../dataset/tech')  
 
 # i try read_dir function form *textreadr* package 
-#  it's look to me good but thier are alot of rpeatation in matrix result
+#  it looks to me good but thier are alot of rpeatation in matrix result
 
 #----------------------------------------------------------------------------------------------------
 # function tor read from directory all file and return datafram as c(filename , content)
@@ -60,5 +60,28 @@ sport          <- read.dir('../../dataset/sport',".txt")
 tech           <- read.dir('../../dataset/tech',".txt")  
 
 #--------------------------------------------------------------------------------------------------------
+# write data as csv file  
+write.csv( x=business ,file = "../../analysis/data/business.csv")  
+write.csv( x=entertainment ,file = "../../analysis/data/entertainment.csv")  
+write.csv( x=politics ,file = "../../analysis/data/politics.csv")  
+write.csv( x=sport ,file = "../../analysis/data/sport.csv")  
+write.csv( x=tech ,file = "../../analysis/data/tech.csv")  
 
-write.csv( x=business ,file = "../../business.csv")  
+#-------------------------------------------------------------------------------------------------------
+# insert label class and merge all togither in one data matrix
+business$class <- c("business")
+entertainment$class <- c("entertainment")
+politics$class <- c("politics")
+sport$class <- c("sport")
+tech$class <-c("tech")
+#merge
+bbc.data.matrix <-rbind(business,entertainment,politics,sport,tech)
+#-------------------------------------------------------------------------------------------------------
+# save data 
+
+write.csv( x=bbc.data.matrix ,file = "../../analysis/data/bbc.csv")  
+
+save(bbc.data.matrix,file = "../../analysis/data/bbc_DataMatrix.RData")
+#-------------------------------------------------------------------------------------------------------
+
+
