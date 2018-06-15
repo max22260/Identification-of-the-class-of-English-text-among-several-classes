@@ -37,7 +37,7 @@ tech           <- read_dir('../../dataset/tech')
 read.dir <-function(dir , pattern){
   
   file.names <- dir(dir, pattern = pattern)
-  file.names = as.data.frame(file.names)
+  file.names = as.data.frame(x=file.names)
   file.names$content = NA
   colnames(file.names) = c("filename", "content" )  
   
