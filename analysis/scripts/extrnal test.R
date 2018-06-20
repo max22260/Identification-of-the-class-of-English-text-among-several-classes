@@ -9,6 +9,7 @@ ex_corpus[["2"]][["content"]]
 ex_corpus[["3"]][["content"]]
 
 ############################################ test1 as document term matrix 
+bagm<-colnames(trainData[-1])
 
 
 ex_dtm <-DocumentTermMatrix(ex_corpus, control = list(tolower = T , removeNumbers =T ,removePunctuation = T , stopwords = T 
@@ -17,6 +18,11 @@ ex_dtm <-DocumentTermMatrix(ex_corpus, control = list(tolower = T , removeNumber
 
 
 ex_dtm<-preProcess(row.data = exdata$content ,stopword.dir = "test.txt",BagOfWord = BagOW , TRUE )
+
+ex_dtm <-preProcess_TFIDF(row.data = exdata$content ,stopword.dir = "test.txt",BagOfWord = BagOW , TRUE )
+
+
+
 str(ex_dtm)
 dim(ex_dtm)
 ### test1 matrix form 
@@ -25,7 +31,7 @@ ex_data_model <- as.data.frame(ex_matrix)
 ##test1_data_model
 dim(ex_data_model)
 
-ex_data_model <- data.frame(x=ex_data_model[subset_info])
+ex_data_model <- data.frame(x=ex_data_model)
 
 ex_pred = predict(svm,newdata = ex_data_model )
 

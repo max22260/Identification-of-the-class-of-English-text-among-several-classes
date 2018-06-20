@@ -171,10 +171,10 @@ preProcess.N_grams <- function(row.data, stopword.dir, BagOfWord , boolstemm  , 
 
 
 
-train_dtm <-preProcess.N_grams(row.data = train_dataset$content ,stopword.dir = "test.txt",BagOfWord = NULL , TRUE , MIN_ngram = 1  , MAX_ngram = 3,weighttype = "TF" )
+train_dtm <-preProcess.N_grams(row.data = train_dataset$content ,stopword.dir = "test.txt",BagOfWord = NULL , TRUE , MIN_ngram = 1  , MAX_ngram = 2,weighttype = "TF" )
 train_dtm <- removeSparseTerms(train_dtm,0.993)
 BagOW <- findFreqTerms(train_dtm)
-test_dtm <-preProcess.N_grams(row.data = testdataset$content ,stopword.dir = "test.txt",BagOfWord = BagOW , TRUE , MIN_ngram = 1  , MAX_ngram = 3,weighttype = "TF" )
+test_dtm <-preProcess.N_grams(row.data = testdataset$content ,stopword.dir = "test.txt",BagOfWord = BagOW , TRUE , MIN_ngram = 1 , MAX_ngram = 2,weighttype = "TF" )
 
 dim(train_dtm)
 dim(test_dtm)
