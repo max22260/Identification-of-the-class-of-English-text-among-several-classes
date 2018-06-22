@@ -2,12 +2,17 @@
 
 
 
-
-
-
-
+setwd("/home/max/Desktop/Identification of the class of English text among several classes/data/")
 
 load(file = "/home/max/Desktop/test/bbc_DataMatrix.RData")
+
+
+
+set.seed(100) # for randmnes
+
+trian <- createDataPartition(y=bbc.data.matrix$class,p=0.70 , list = FALSE)
+train_dataset <- bbc.data.matrix[trian,]
+test_dataset <- bbc.data.matrix[-trian,]
 
 preProcess_TFIDF <- function(row.data, stopword.dir, BagOfWord , boolstemm ){
   
@@ -60,11 +65,11 @@ binary.weight <-function(x)
 
 
 
-train_dtm <-preProcess_TFIDF(row.data = bbc.data.matrix$content ,stopword.dir = "test.txt",BagOfWord = NULL , TRUE)
+train_dtm <-preProcess_TFIDF(row.data = bbc.data.matrix$content ,stopword.dir = "stopword.txt",BagOfWord = NULL , TRUE)
 
 train_dtm <- removeSparseTerms(train_dtm,0.993)
 BagOW <- findFreqTerms(train_dtm)
-test_dtm <-preProcess_TFIDF(row.data = testdata$content ,stopword.dir = "test.txt",BagOfWord = BagOW , TRUE )
+test_dtm <-preProcess_TFIDF(row.data = test_dataset$content ,stopword.dir = "stopword.txt",BagOfWord = BagOW , TRUE )
 
 dim(train_dtm)
 dim(test_dtm)
@@ -117,6 +122,9 @@ mmetric(pre,test1_data_model[,1],c("ACC","TPR","PRECISION","F1"))
 
 
 
+library(caret)
+library(doParallel)
+
 acc_matrix <- matrix(nrow = 10 , ncol = 2 )
 colnames(acc_matrix) <- c("accuracy" , "Time")
 
@@ -167,17 +175,18 @@ colnames(new) <- "accuracy"
 
 require(reshape2)
 s <- ggplot(data = melt(new), aes(x=variable, y=value)) + geom_boxplot(aes(fill=variable))
+s
 
 
 
-
-testIndexes <- which(folds==3,arr.ind=TRUE)
+testIndexes <- which(folds==8,arr.ind=TRUE)
 testData <- train_data_model[testIndexes, ]
 trainData <- train_data_model[-testIndexes, ]
 
+bagword <- colnames(trainData)
+row <- rownames(trainData)
 
-
-save(trainData,testData,BagOW,file = "/home/max/Desktop/best_sample.RData")
+save(trainData,testData,BagOW,row,file = "/home/max/Desktop/best_sample.RData")
 
 
 load("/home/max/Desktop/best_sample.RData")

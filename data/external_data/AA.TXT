@@ -1,0 +1,4 @@
+A firm that manages millions of job applications around the world suspects it has suffered a data breach.
+PageUp's software is used for recruitment, but also salary information, bank details, tax numbers and other sensitive personal data.
+Its clients include supermarket Aldi, Clydesdale Bank and chocolate-maker Lindt.
+The firm has notified data regulators, including the UK's Information Commissioner's Office.

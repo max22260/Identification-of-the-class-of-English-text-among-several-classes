@@ -1,0 +1,56 @@
+"It wasn't the first time my key card failed, I assumed it was time to replace it."
+
+So began a sequence of events that saw Ibrahim Diallo fired from his job, not by his manager but by a machine.
+
+He has detailed his story in a blogpost which he hopes will serve as a warning to firms about relying too much on automation.
+
+"Automation can be an asset to a company, but there needs to be a way for humans to take over if the machine makes a mistake," he writes.
+
+The story of Mr Diallo's sacking by machine began when his entry pass to the Los Angeles skyscraper where his office was based failed to work, forcing him to rely on the security guard to allow him entry.
+
+"As soon as I got to my floor, I went to see my manager to let her know. She promised to order me a new one right away."
+Image copyright Getty Images
+Image caption Not being able to get into his office was frustrating but set off no alarm bells for Mr Diallo
+
+Then he noticed that he was logged out of his work system and a colleague told Mr Diallo that the word "Inactive" was listed alongside his name.
+
+His day got worse. After lunch - and a 10-minute wait for a co-worker to let him back into his office - he was told by his recruiter that she had received an email saying his contract was terminated. She promised to sort out the problem.
+
+The next day he had been locked out of every single system "except my Linux machine" and then, after lunch, two people appeared at his desk. Mr Diallo was told that an email had been received telling them to escort him from the building.
+Image copyright Getty Images
+Image caption The moment he was escorted from the building, he knew things had taken a new turn
+
+His boss was confused but helpless as Mr Diallo recalls: "I was fired. There was nothing my manager could do about it. There was nothing the director could do about it. They stood powerless as I packed my stuff and left the building."
+
+At the time, he was eight months into a three-year contract and over the next three weeks he was copied into emails about his case.
+
+"I watched it be escalated to bigger and more powerful titles over and over, yet no-one could do anything about it. From time-to-time, they would attach a system email.
+
+"It was soulless and written in red as it gave orders that dictated my fate. Disable this, disable that, revoke access here, revoke access there, escort out of premises, etc.
+
+"The system was out for blood and I was its very first victim."
+
+    Artificial intelligence must be 'for common good'
+    UK PM seeks 'safe and ethical' artificial intelligence
+
+It took Mr Diallo's bosses three weeks to find out why he had been sacked. His firm was going through changes, both in terms of the systems it used and the people it employed.
+
+His original manager had been recently laid off and sent to work from home for the rest of his time at the firm and in that period he had not renewed Mr Diallo's contract in the new system.
+Image copyright Getty Images
+Image caption Once one box was not ticked, the whole system kicked in to kick Mr Diallo out
+
+After that, machines took over - flagging him as an ex-employee.
+
+"All the necessary orders are sent automatically and each order completion triggers another order. For example, when the order for disabling my key card is sent, there is no way of it to be re-enabled.
+
+"Once it is disabled, an email is sent to security about recently dismissed employees. Scanning the key card is a red flag. The order to disable my Windows account is also sent. There is also one for my Jira account. And on and on."
+
+Although Mr Diallo was allowed back to work, he had missed out on three weeks' worth of pay and been escorted from the building "like a thief". He had to explain his disappearance to others and found his co-workers became distant.
+
+He decided to move to another job.
+
+His story should serve as a cautionary tale about the human-machine relationship, thinks AI expert Dave Coplin.
+
+"It's another example of a failure of human thinking where they allow it to be humans versus machines rather than humans plus machines," he said.
+
+"One of the fundamental skills for all humans in an AI world is accountability - just because the algorithm says it's the answer, it doesn't mean it actually is." 
